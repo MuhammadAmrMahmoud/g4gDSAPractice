@@ -1,0 +1,23 @@
+public class Solution
+{
+    int i, sum, isum,difference;
+    public int MissingNumber(int[] arr, int n)
+    {
+        
+        if (arr.Length < n)
+        {
+            for (i = 0; i < n-1; i++)
+            {
+                int v = sum + arr[i];
+                sum = v;
+            }
+            for (i = 0; i <=n; i++)
+            {
+                int v = isum + i;
+                isum = v;
+            }
+            difference = isum - sum;
+        }
+        return difference;
+    }
+}
