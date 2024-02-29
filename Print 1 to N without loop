@@ -1,0 +1,16 @@
+class Solution
+{
+    long num = 0;
+    //Complete this function
+    //Function to print numbers from 1 to N.
+    public void printNos(long N)
+    {
+        if (num < N)
+        {
+            num = num + 1;
+            Console.WriteLine(num);
+            printNos(N);
+        }
+        else { Console.WriteLine("Recursion is finished"); }
+    }
+}
